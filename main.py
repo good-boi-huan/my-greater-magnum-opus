@@ -63,3 +63,49 @@
 # for value in numbers:
 #   sums = sums + value
 # print(sums)
+
+# Conditionals
+# Definition: if x then y
+# Ex: If I go to school, then I learn.
+# Ex: If I drink and drive, then I will get into an accident.
+
+# If statements are used for decision making. If statements only run if the boolean expression is true.
+
+# Template
+# money = 1000
+# while money >= 0:
+#   print(f"You have {money} dollars")
+#   order = input(f"Choose one to buy\nPizza: $10\nCandy: $5\nCar: $500")
+#   if order.lower == "pizza":
+#     money = money - 10
+#   elif order.lower == "candy":
+#     money = money - 5
+#   elif order.lower == "car":
+#     money = money - 500
+#   print(f"You have bought a {order.lower} and you have {money} dollars left.")
+#   play_again = input("Do you want to buy more? ")
+#   if play_again.lower != "yes":
+    
+
+# elif provide an alternate situation
+# else is all other situations not 
+
+# Different Seasons
+# Winter, spring, summer, fall
+# Depending on what the season the user says it is, we want to tend to our garden
+# Winter: stay inside
+# spring: plant trees
+# summer: water trees
+# fall: pick apples
+
+season = input("What season is it now? ")
+if season.lower() == "winter":
+  print("Please stay inside and stay warm.")
+elif season.lower() == "spring":
+  print("Please plant some apple trees.")
+elif season.lower() == "summer":
+  print("Please water your apple trees.")
+elif season.lower() == "fall" or season.lower() == "autumn":
+  print("Please pick your apple trees.")
+else:
+  print("Do you even know your seasons? :|")
