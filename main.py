@@ -38,3 +38,16 @@
 #   print(counter + 1)
 #   counter = counter + 1
 
+# for loop
+# counter = 0
+# for counter in range(5):
+#   print(counter + 1)
+
+# range(5) -> 0, 1, 2, 3, 4
+# range(0, 5) -> 0, 1, 2, 3, 4
+# range function is inclusive for the left parameter and exclusive for the right parameter
+
+# counter = 5
+# for counter in range(0, 5):
+#   print(counter + 1)
+
