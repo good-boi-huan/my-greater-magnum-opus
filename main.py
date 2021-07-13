@@ -72,19 +72,22 @@
 # If statements are used for decision making. If statements only run if the boolean expression is true.
 
 # Template
-# money = 1000
-# while money >= 0:
-#   print(f"You have {money} dollars")
-#   order = input(f"Choose one to buy\nPizza: $10\nCandy: $5\nCar: $500")
-#   if order.lower == "pizza":
-#     money = money - 10
-#   elif order.lower == "candy":
-#     money = money - 5
-#   elif order.lower == "car":
-#     money = money - 500
-#   print(f"You have bought a {order.lower} and you have {money} dollars left.")
-#   play_again = input("Do you want to buy more? ")
-#   if play_again.lower != "yes":
+money = 1000
+while money >= 0:
+  print(f"You have {money} dollars")
+  order = input(f"Choose one to buy\nPizza: $10\nCandy: $5\nCar: $500\n")
+  if order.lower() == "pizza":
+    money = money - 10
+  elif order.lower() == "candy":
+    money = money - 5
+  elif order.lower() == "car":
+    money = money - 500
+  print(f"You have bought a {order.lower()} and you have {money} dollars left.")
+  play_again = input("Do you want to buy more? ")
+  if play_again.lower() == "no":
+    break
+if money <= 0:
+  print("You have no more money.")
     
 
 # elif provide an alternate situation
@@ -98,14 +101,14 @@
 # summer: water trees
 # fall: pick apples
 
-season = input("What season is it now? ")
-if season.lower() == "winter":
-  print("Please stay inside and stay warm.")
-elif season.lower() == "spring":
-  print("Please plant some apple trees.")
-elif season.lower() == "summer":
-  print("Please water your apple trees.")
-elif season.lower() == "fall" or season.lower() == "autumn":
-  print("Please pick your apple trees.")
-else:
-  print("Do you even know your seasons? :|")
+# season = input("What season is it now? ")
+# if season.lower() == "winter":
+#   print("Please stay inside and stay warm.")
+# elif season.lower() == "spring":
+#   print("Please plant some apple trees.")
+# elif season.lower() == "summer":
+#   print("Please water your apple trees.")
+# elif season.lower() == "fall" or season.lower() == "autumn":
+#   print("Please pick your apple trees.")
+# else:
+#   print("Do you even know your seasons? :|")
