@@ -72,22 +72,22 @@
 # If statements are used for decision making. If statements only run if the boolean expression is true.
 
 # Template
-money = 1000
-while money >= 0:
-  print(f"You have {money} dollars")
-  order = input(f"Choose one to buy\nPizza: $10\nCandy: $5\nCar: $500\n")
-  if order.lower() == "pizza":
-    money = money - 10
-  elif order.lower() == "candy":
-    money = money - 5
-  elif order.lower() == "car":
-    money = money - 500
-  print(f"You have bought a {order.lower()} and you have {money} dollars left.")
-  play_again = input("Do you want to buy more? ")
-  if play_again.lower() == "no":
-    break
-if money <= 0:
-  print("You have no more money.")
+# money = 1000
+# while money >= 0:
+#   print(f"You have {money} dollars")
+#   order = input(f"Choose one to buy\nPizza: $10\nCandy: $5\nCar: $500\n")
+#   if order.lower() == "pizza":
+#     money = money - 10
+#   elif order.lower() == "candy":
+#     money = money - 5
+#   elif order.lower() == "car":
+#     money = money - 500
+#   print(f"You have bought a {order.lower()} and you have {money} dollars left.")
+#   play_again = input("Do you want to buy more? ")
+#   if play_again.lower() == "no":
+#     break
+# if money <= 0:
+#   print("You have no more money.")
     
 
 # elif provide an alternate situation
@@ -112,3 +112,44 @@ if money <= 0:
 #   print("Please pick your apple trees.")
 # else:
 #   print("Do you even know your seasons? :|")
+
+# Guess the number project
+
+import random
+computer_num = random.randint(0, 10)
+tries = 5
+attempts = 0
+number_off = 0
+win = False
+play = True
+
+while play == True:
+  while tries > 0 and win == False:
+    guess = int(input("Enter a number between 0 and 10 "))
+    if guess == computer_num:
+      attempts = attempts + 1
+      print(f"Congratuations! You won! The number is {computer_num}. You guessed the number in {attempts} tries.")
+      win = True
+    elif guess < computer_num and guess >= 0:
+      attempts = attempts + 1
+      tries = tries - 1
+      far_off = computer_num - guess
+      print(f"Unfortunately, the number is too small. You have {tries} tries left. You are {far_off} off of the real number.")
+    elif guess > computer_num and guess <= 10:
+      attempts = attempts + 1
+      tries = tries - 1
+      far_off = guess - computer_num
+      print(f"Unfortunately, the number is too big. You have {tries} tries left. You are {far_off} off of the real number.")
+    else:
+      print("Read the freaking instructions again.")
+  if tries == 0:
+    print("You ran out of tries. You lose. Haha!")
+  play_again = input("Do you want to play again (y/n)? ")
+  if play_again == "n":
+    play = False
+  else:
+      tries = 5
+      attempts = 0
+      win = False
+      computer_num = random.randint(0, 10)
+      play = True
