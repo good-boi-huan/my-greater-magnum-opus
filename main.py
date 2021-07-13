@@ -51,3 +51,15 @@
 # for counter in range(0, 5):
 #   print(counter + 1)
 
+# List of numbers
+# numbers = [1, 2, 3, 4, 5]
+# sums = 0
+# for numbers in range(1, 6):
+#   sums = sums + numbers
+# print(sums)
+
+# numbers = [3212983, 32434, 5693, 4, 2323]
+# sums = 0
+# for value in numbers:
+#   sums = sums + value
+# print(sums)
